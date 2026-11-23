@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Las Gidi Collection — Ifueko</title>
+  <meta name="description" content="A look from Las Gidi by Ifueko. Made to measure.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="looks.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body class="theme-light">
+
+  <header class="site-header">
+    <a class="site-header__wordmark" href="index.html">IFUEKO</a>
+
+    <nav class="site-nav" aria-label="Main">
+      <a class="caps-link" href="collection.html">Collection</a>
+      <a class="caps-link" href="artist.html">The Artist</a>
+      <!-- Bag does nothing yet -->
+      <button class="caps-link" type="button" aria-label="Bag, 0 items">Bag (0)</button>
+    </nav>
+  </header>
+
+  <!-- Everything inside data-look-page is filled in by app.js from looks.js -->
+  <main data-look-page>
+    <div class="back-row">
+      <a class="caps-link back-link" href="collection.html">
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 12H4"/><path d="M10 6l-6 6 6 6"/></svg>
+        Las Gidi Collection
+      </a>
+    </div>
+
+    <section class="look" data-look-content>
+      <div class="gallery">
+        <div class="gallery__thumbs" role="group" aria-label="Choose a view">
+          <button class="gallery__thumb" type="button" aria-pressed="true" aria-label="Show front view" data-view="front"><img alt=""></button>
+          <button class="gallery__thumb" type="button" aria-pressed="false" aria-label="Show back view" data-view="back"><img alt=""></button>
+          <button class="gallery__thumb" type="button" aria-pressed="false" aria-label="Show detail" data-view="detail"><img alt=""></button>
+          <button class="gallery__thumb" type="button" aria-pressed="false" aria-label="Show original sketch" data-view="sketch"><img alt=""></button>
+        </div>
+
+        <img class="gallery__main" alt="" data-gallery-main>
+      </div>
+
+      <div class="look__info">
+        <div class="look__heading">
+          <p class="meta-caps">Las Gidi Collection</p>
+          <h1 class="look__title" data-field="name"></h1>
+          <p class="look__price" data-field="price"></p>
+        </div>
+
+        <p class="look__description" data-field="description"></p>
+
+        <div class="look__note">
+          <p class="look__note-title">Made to measure</p>
+          <p class="look__note-text">Every Ifueko piece is made for you. After you order, we’ll be in touch to take your measurements.</p>
+        </div>
+
+        <!-- TODO: connect ordering. This button does nothing yet -->
+        <button class="button look__order" type="button">Order this dress</button>
+      </div>
+    </section>
+
+    <!-- Shown only if the address doesn't match a look in looks.js -->
+    <section class="look-missing" data-look-not-found hidden>
+      <h1 class="page-title">LOOK NOT FOUND</h1>
+      <p class="look__description">We couldn’t find that look.</p>
+      <a class="caps-link" href="collection.html">Back to the Las Gidi Collection</a>
+    </section>
+
+    <section class="more" aria-labelledby="more-heading" data-more>
+      <div class="more__header">
+        <h2 id="more-heading" class="section-title">MORE FROM LAS GIDI</h2>
+        <a class="caps-link caps-link--small" href="collection.html">View all</a>
+      </div>
+
+      <ul class="look-grid" data-more-grid></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 Ifueko</span>
+    <div class="site-footer__links">
+      <a class="caps-link" href="https://www.instagram.com/artobosa/">Instagram</a>
+      <!-- TODO: add your email address after mailto: -->
+      <a class="caps-link" href="mailto:">Email</a>
+    </div>
+  </footer>
+
+  <!-- The card used for each look in "More from Las Gidi" -->
+  <template id="look-card-template">
+    <li>
+      <a class="look-card" href="collection.html">
+        <img class="look-card__image" alt="" loading="lazy">
+        <span class="look-card__caption">
+          <span class="look-card__name"></span>
+          <span class="look-card__price"></span>
+        </span>
+      </a>
+    </li>
+  </template>
+
+</body>
+</html>
