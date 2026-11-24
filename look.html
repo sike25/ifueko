@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,16 +14,16 @@
   <script src="looks.js" defer></script>
   <script src="app.js" defer></script>
 </head>
+
+
 <body class="theme-light">
 
+  <!-- SITE HEADER -->
   <header class="site-header">
     <a class="site-header__wordmark" href="index.html">IFUEKO</a>
-
     <nav class="site-nav" aria-label="Main">
       <a class="caps-link" href="collection.html">Collection</a>
       <a class="caps-link" href="artist.html">The Artist</a>
-      <!-- Bag does nothing yet -->
-      <button class="caps-link" type="button" aria-label="Bag, 0 items">Bag (0)</button>
     </nav>
   </header>
 
@@ -61,12 +62,12 @@
           <p class="look__note-text">Every Ifueko piece is made for you. After you order, we’ll be in touch to take your measurements.</p>
         </div>
 
-        <!-- TODO: connect ordering. This button does nothing yet -->
+        <!-- TODO: design + implement ordering -->
         <button class="button look__order" type="button">Order this dress</button>
       </div>
     </section>
 
-    <!-- Shown only if the address doesn't match a look in looks.js -->
+    <!-- Shown if the address doesn't match a look in looks.js -->
     <section class="look-missing" data-look-not-found hidden>
       <h1 class="page-title">LOOK NOT FOUND</h1>
       <p class="look__description">We couldn’t find that look.</p>
@@ -83,11 +84,11 @@
     </section>
   </main>
 
+  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <span>© 2026 Ifueko</span>
     <div class="site-footer__links">
       <a class="caps-link" href="https://www.instagram.com/artobosa/">Instagram</a>
-      <!-- TODO: add your email address after mailto: -->
       <a class="caps-link" href="mailto:">Email</a>
     </div>
   </footer>

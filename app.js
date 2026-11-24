@@ -1,8 +1,3 @@
-/* ==========================================================================
-   Ifueko — builds the Collection grid and the look page from looks.js
-   You shouldn't need to edit this file. Edit looks.js instead.
-   ========================================================================== */
-
 (function () {
   'use strict';
 
@@ -10,7 +5,7 @@
     front:  'front view',
     back:   'back view',
     detail: 'close-up of the detail',
-    sketch: 'Obosa Ogieva’s original sketch'
+    sketch: 'Obosa’s original sketch'
   };
 
   function imagePath(look, view) {
